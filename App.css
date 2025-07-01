@@ -1,0 +1,111 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.game-background {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fefcea, #f1da36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.score {
+  background: #fdd835;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+.grid-6x6 {
+  display: grid;
+  grid-template-columns: repeat(6, 90px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.square {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #ffb700;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.number-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeb3b;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
